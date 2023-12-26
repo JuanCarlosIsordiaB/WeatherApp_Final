@@ -17,9 +17,7 @@ export const WeatherApp = () => {
     const loadInfo = async(city) => {
 
         try {
-            const req = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`, {
-              referrerPolicy: 'unsafe_url'
-            });
+            const req = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`);
 
             const res = await req.json();
 
